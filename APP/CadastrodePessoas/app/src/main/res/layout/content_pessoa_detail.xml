@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background" >
+
+    <RelativeLayout
+        android:id="@+id/lytTitlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/titlebar_background" >
+
+        <ImageButton
+            android:id="@+id/imgAnterior"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_top_style_1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@mipmap/anterior"
+            android:contentDescription="@string/voltar" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgAnterior"
+            android:shadowColor="@color/shadow"
+            android:shadowDx="0.5"
+            android:shadowDy="0.5"
+            android:shadowRadius="0.5"
+            android:text="@string/pessoa_titulo"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/imgRemover"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_toLeftOf="@+id/imgSalvar"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_top_style_2"
+            android:contentDescription="@string/remover_pessoa"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@mipmap/remover" />
+
+        <ImageButton
+            android:id="@+id/imgSalvar"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/button_top_style_2"
+            android:contentDescription="@string/salvar_pessoa"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@mipmap/salvar" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sclDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/lytTitlebar"
+        android:fadeScrollbars="true" >
+
+        <LinearLayout
+            android:id="@+id/lytContent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:textSize="18sp" >
+
+            <TextView
+                android:id="@+id/txtNomePessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/nome_pessoa" />
+
+            <EditText
+                android:id="@+id/edtNomePessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textCapCharacters"
+                android:textColor="@color/text">
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtCpfPessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/cpf" />
+
+            <EditText
+                android:id="@+id/edtCpfPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:textColor="@color/text">
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtRgPessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/rg" />
+
+            <EditText
+                android:id="@+id/edtRgPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textCapCharacters"
+                android:textColor="@color/text">
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtDataNascimentoPessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/dataNascimento" />
+
+            <EditText
+                android:id="@+id/edtDataNascimentoPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date"
+                android:textColor="@color/text"/>
+
+            <TextView
+                android:id="@+id/txtTelefonePessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/telefonePessoa" />
+
+            <EditText
+                android:id="@+id/edtTelefonePessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textCapCharacters"
+                android:textColor="@color/text">
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtTelefoneCelularPessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/telefoneCelular" />
+
+            <EditText
+                android:id="@+id/edtTelefoneCelularPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textCapCharacters"
+                android:textColor="@color/text">
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtEmailPessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/emailPessoa" />
+
+            <EditText
+                android:id="@+id/edtEmailPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/text">
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtLogradouroPessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/enderecoLogradouro" />
+
+            <EditText
+                android:id="@+id/edtLogradouroPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textCapCharacters"
+                android:textColor="@color/text">
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtNumeroPessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/enderecoNumero" />
+
+            <EditText
+                android:id="@+id/edtNumeroPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:textColor="@color/text">
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtComplementoPessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/enderecoComplemento" />
+
+            <EditText
+                android:id="@+id/edtComplementoPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textCapCharacters"
+                android:textColor="@color/text">
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtCepPessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/enderecoCep" />
+
+            <EditText
+                android:id="@+id/edtCepPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textCapCharacters"
+                android:textColor="@color/text">
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtBairroPessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/enderecoBairro" />
+
+            <EditText
+                android:id="@+id/edtBairroPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textCapCharacters"
+                android:textColor="@color/text">
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtMunicipioPessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/enderecoMunicipio" />
+
+            <EditText
+                android:id="@+id/edtMunicipioPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textCapCharacters"
+                android:textColor="@color/text">
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtUfPessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/enderecoUfNome" />
+
+            <EditText
+                android:id="@+id/edtUfPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="20"
+                android:inputType="textCapCharacters"
+                android:textColor="@color/text">
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtObservacaoPessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/observacao" />
+
+            <EditText
+                android:id="@+id/edtObservacaoPessoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textImeMultiLine"
+                android:lines="3"
+                android:textColor="@color/text">
+            </EditText>
+
+            <TextView
+                android:id="@+id/txtSexoPessoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:text="@string/sexo" />
+
+            <RadioGroup
+                android:id="@+id/rgSexoPessoa"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rbMasculinoPessoa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:textColor="@color/text"
+                    android:text="@string/masculino" />
+
+                <RadioButton
+                    android:id="@+id/rbFemininoPessoa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:textColor="@color/text"
+                    android:text="@string/feminino" />
+            </RadioGroup>
+
+            <!--Button
+                android:id="@+id/btnSalvar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_style"
+                android:padding="7dp"
+                android:text="@string/salvar"
+                android:textColor="@color/text"
+                android:textSize="14sp"
+                android:textStyle="bold" /-->
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

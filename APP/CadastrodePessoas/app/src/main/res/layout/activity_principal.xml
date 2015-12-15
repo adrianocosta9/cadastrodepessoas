@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background" >
+
+    <RelativeLayout
+        android:id="@+id/lytTitlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/titlebar_background" >
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:shadowColor="@color/shadow"
+            android:shadowDx="0.5"
+            android:shadowDy="0.5"
+            android:shadowRadius="0.5"
+            android:text="@string/app_name"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/imgContato"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_top_style_2"
+            android:contentDescription="@string/img_contato"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@mipmap/contato" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lytContent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtDireitos"
+        android:layout_below="@+id/lytTitlebar"
+        android:orientation="vertical" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/galeria"
+            android:layout_width="fill_parent"
+            android:layout_height="300dp" />
+
+        <TextView
+            android:id="@+id/txtCaption"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/caption"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:text="@string/menu_principal"
+            android:textColor="@color/text"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/menuPrincipal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/background"
+            android:dividerHeight="1dip"
+            android:fadeScrollbars="true" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtDireitos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="7dp"
+        android:paddingTop="2dp"
+        android:text="@string/direitos"
+        android:textColor="@color/direitos"
+        android:textSize="12sp" />
+
+</RelativeLayout>

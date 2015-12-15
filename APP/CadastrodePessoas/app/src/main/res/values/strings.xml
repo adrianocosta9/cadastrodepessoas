@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Cadastro de Pessoas</string>
+    <string name="menu_principal">Principal</string>
+    <string name="direitos">&#169; Adriano P. Costa</string>
+
+    <string-array name="menu_principal">
+        <item>Nova Pessoa</item>
+        <item>Listar Pessoas</item>
+        <item>Sair</item>
+    </string-array>
+
+    <string name="nome_pessoa">Nome</string>
+    <string name="pesquisar">Pesquisar</string>
+    <string name="cpf">CPF</string>
+    <string name="rg">RG</string>
+    <string name="dataNascimento">Data de Nascimento</string>
+    <string name="sexo">Sexo</string>
+    <string name="masculino">Masculino</string>
+    <string name="feminino">Feminino</string>
+    <string name="telefoneCelular">Telefone Celular</string>
+    <string name="observacao">Observacao</string>
+    <string name="enderecoEstadoNome">Estado</string>
+    <string name="enderecoUfNome">Uf</string>
+    <string name="enderecoMunicipio">Município</string>
+    <string name="enderecoBairro">Bairro</string>
+    <string name="enderecoLogradouro">Logradouro</string>
+    <string name="enderecoNumero">Número</string>
+    <string name="enderecoComplemento">Complemento</string>
+    <string name="enderecoCep">CEP</string>
+    <string name="telefonePessoa">Telefone</string>
+    <string name="emailPessoa">E-mail</string>
+    <string name="numero_telefone">Número Telefone</string>
+    <string name="img_contato">Contato</string>
+    <string name="salvar">Salvar</string>
+    <string name="remover_pessoa">Remover pessoa</string>
+    <string name="salvar_pessoa">Salvar pessoa</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="chamar">Chamar</string>
+    <string name="enviar_email">Enviar e-mail</string>
+
+    <string name="contato_titulo">Contato</string>
+    <string name="pessoa_titulo">Pessoa</string>
+    <string name="pessoa_list_titulo">Pessoas</string>
+    <string name="title_activity_pessoa_list_view">Pessoas</string>
+    <string name="title_activity_pessoa_detail">Pessoa</string>
+    <string name="sem_chamadas">Seu dispositivo não realizar chamadas telefônicas</string>
+    <string name="sem_internet">Por favor, habilite o acesso a Internet antes de usar esse aplicativo</string>
+    <string name="cpf_invalido">O CPF informado é inválido</string>
+    <string name="adicionar_pessoa_sucess">Pessoa inserido com sucesso</string>
+    <string name="atualizar_pessoa_sucess">Pessoa alterado com sucesso</string>
+    <string name="remover_pessoa_dialog">Deseja realmente remover pessoa?</string>
+    <string name="adiconar_pessoa_erro">Erro ao inserir pessoa, não e permitido inserir uma pessoa com o mesmo nome ou CPF !</string>
+
+    <string name="pessoa_selecao">Pessoa:</string>
+    <string name="voltar">Voltar</string>
+    <string name="proximo">Próximo</string>
+    <string name="title_activity_contato">Contato</string>
+    <string name="adicionar_pessoa">Adicionar Pessoa</string>
+    <string name="action_settings">Configurações</string>
+    <string name="img_pesquisa">Pesquisar Pessoa</string>
+
+    <string name="latitude">-19.9600141</string>
+    <string name="longitude">-43.9674426</string>
+    <string name="nome">Adriano P. Costa</string>
+    <string name="endereco">Rua Mario Coutinho, 491, APTO 307, Estoril, Belo Horizonte/MG, CEP: 30.494057</string>
+    <string name="telefone">037991174055</string>
+    <string name="email">adrianocosta9@gmail.com</string>
+</resources>
