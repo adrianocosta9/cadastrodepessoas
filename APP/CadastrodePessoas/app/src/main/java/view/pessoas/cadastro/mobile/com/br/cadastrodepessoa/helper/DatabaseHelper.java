@@ -31,7 +31,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper{
 		super(context, DATABASE_NAME, null, VERSAO);
 	}
 
-	//evendo de criacao da classe implementa a criacao da tabela
+	//evendo de criacao da classe implementa a criacao das tabelas
 	@Override
 	public void onCreate(SQLiteDatabase db, ConnectionSource connS) {
 		try {
@@ -41,7 +41,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper{
 		}
 	}
 
-	//Metodo de atualizacao da tabela
+	//Metodo de atualizacao da tabela, executado quando muda a versao do BD
 	@Override
 	public void onUpgrade(SQLiteDatabase db, ConnectionSource connS, int oldV, int newV) {
 		try {

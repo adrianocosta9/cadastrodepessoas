@@ -33,7 +33,6 @@ public class ContatoView extends FragmentActivity {
     private Button btnChamar, btnEmail;
     private FrameLayout lytMap;
 
-    // declare GoogleMap object
     private GoogleMap map;
     private GoogleMapOptions options = new GoogleMapOptions();
     private SupportMapFragment fragMap;
@@ -110,7 +109,7 @@ public class ContatoView extends FragmentActivity {
                     String[] email = new String[]{getString(R.string.email)};
                     Intent iSend = new Intent(Intent.ACTION_SEND);
                     iSend.putExtra(Intent.EXTRA_EMAIL, email);
-                    iSend.putExtra(Intent.EXTRA_SUBJECT, "");
+                    iSend.putExtra(Intent.EXTRA_SUBJECT, "APP Cadastro de Pessoas");
                     iSend.setType("plain/text");
                     iSend.putExtra(Intent.EXTRA_TEXT, "");
                     startActivity(iSend);

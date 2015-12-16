@@ -34,30 +34,6 @@ public class AlertMensagem {
 
 	@SuppressWarnings("deprecation")
 	public static void mensagemAlertaFinish(Context ctx, String titulo,
-			String mensagem, final Activity view) {
-		AlertDialog alertDialog = new AlertDialog.Builder(ctx).create();
-
-		// Setting Dialog Title
-		alertDialog.setTitle(titulo);
-
-		// Setting Dialog Message
-		alertDialog.setMessage(mensagem);
-
-		// Setting OK Button
-		alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int which) {
-				dialog.cancel();
-				if (!(view instanceof PrincipalActivity))
-					view.finish();
-			}
-		});
-
-		// Showing Alert Message
-		alertDialog.show();
-	}
-
-	@SuppressWarnings("deprecation")
-	public static void mensagemAlertaFinish(Context ctx, String titulo,
 			String mensagem, final Activity view,
 			final Map<String, Object> paramsIntent,
 			final Map<String, Object> params) {

@@ -44,10 +44,10 @@ public class PessoaListAdapter extends BaseAdapter {
 		}
 		
 		//Busca o item
-		Pessoa cliente = lista.get(position);
+		Pessoa pessoa = lista.get(position);
 		
 		//Seta o nome da pessoa
-		((TextView) convertView.findViewById(R.id.txtNomeCliente)).setText(cliente.getNome());
+		((TextView) convertView.findViewById(R.id.txtNomeCliente)).setText(pessoa.getNome());
 	
 		return convertView;
 		

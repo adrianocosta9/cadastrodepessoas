@@ -32,7 +32,6 @@ public class PrincipalActivity extends Activity {
     protected static final int LISTA_PESSOA = 1;
     protected static final int SAIR = 2;
 
-    // declare view objects
     private ImageButton imgContato;
     private ListView menuPrincipalList;
     private MenuPrincipalAdapter menuPrincipalAdapter;
