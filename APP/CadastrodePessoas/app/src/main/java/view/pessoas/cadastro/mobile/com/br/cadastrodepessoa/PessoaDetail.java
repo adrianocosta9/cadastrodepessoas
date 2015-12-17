@@ -184,7 +184,7 @@ public class PessoaDetail extends AppCompatActivity {
         }
         else  if (PessoaRepository.getInstancia(this).naoDeveExistirPessoasIguais(
                     ((EditText) findViewById(R.id.edtNomePessoa)).getText().toString(),
-                        Utils.unmask(((EditText) findViewById(R.id.edtCpfPessoa)).getText().toString())).size() == 0){
+                        Utils.unmask(((EditText) findViewById(R.id.edtCpfPessoa)).getText().toString()), id).size() == 0){
 
             //Seta o objeto pessoa com os dados informados na activity.
             pessoa = new Pessoa();

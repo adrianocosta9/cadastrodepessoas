@@ -24,14 +24,21 @@ public class PessoaRepository {
 		pessoaDAO = DatabaseHelper.getInstancia(ctx).getPessoaDAO();
 	}
 
-	public List<Pessoa> naoDeveExistirPessoasIguais (String nome, String cpf){
+	public List<Pessoa> naoDeveExistirPessoasIguais (String nome, String cpf, Integer id){
 		try {
-			PreparedQuery<Pessoa> preparedQuery = pessoaDAO.queryBuilder()
+			PreparedQuery<Pessoa> preparedQuery =  id != null ? pessoaDAO.queryBuilder()
 					.orderBy("nome", true)
 					.where().not().eq("inativo", true)
 					.and().like("nome", nome)
 					.or().like("cpf", cpf)
-					.prepare();
+					.and().not().eq("id", id)
+					.prepare() :
+						pessoaDAO.queryBuilder()
+						.orderBy("nome", true)
+						.where().not().eq("inativo", true)
+						.and().like("nome", nome)
+						.or().like("cpf", cpf)
+						.prepare();
 			return pessoaDAO.query(preparedQuery);
 		} catch (SQLException e) {
 			Log.e(PessoaRepository.class.getName(), e.getMessage());
